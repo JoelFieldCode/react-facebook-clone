@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import NewsFeed from './components/NewsFeed/NewsFeed.js';
+import Login from './components/Auth/Login.js';
 import {HashRouter, Route} from 'react-router-dom';
 import './App.css';
 
@@ -12,7 +13,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Facebook</h1>
         </header>
-        <Route path="/" component={NewsFeed}/>
+        <Route exact path="/" component={NewsFeed}/>
+        <Route exact path="/login" component={Login}/>
       </div>
     );
   }
